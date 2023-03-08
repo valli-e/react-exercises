@@ -5,7 +5,7 @@ class App extends React.Component{
   render() {
     return (
       <div>
-        < Welcome name={<strong>Valentina</strong>} age={21} />
+        < Welcome name={<strong>John</strong>} age={21} />
       </div>
     );
   }
