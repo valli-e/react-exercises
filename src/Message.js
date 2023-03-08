@@ -1,8 +1,7 @@
-import React from 'react'
+import React from "react";
 
-export default function () {
-  return (
-    <div><p>What a beautiful day!</p>;
-    </div>
-  )
+export class Message extends React.Component{
+    render(){
+        return <p>What a beautiful day!</p>
+    }
 }
