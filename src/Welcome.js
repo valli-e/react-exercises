@@ -1,6 +1,6 @@
 import React from "react";
 
-class Welcome extends React.Component {
+class Welcome extends React.Component{
   render() {
     return (
       <div>
@@ -10,8 +10,6 @@ class Welcome extends React.Component {
     );
   }
 }
-Welcome.defaultProps = {
-    name: "Valentina"
-  };
+
 
 export default Welcome;
