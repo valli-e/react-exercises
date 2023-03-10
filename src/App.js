@@ -1,16 +1,14 @@
 import React from 'react';
-import  Welcome  from './Welcome'
+import  { Counter } from './Counter'
 
 class App extends React.Component{
   render() {
     return (
       <div>
-        < Welcome name={<strong>Valentina</strong>} age={21} />
+        < Counter />
       </div>
     );
   }
 }
-Welcome.defaultProps = {
-  name: "Valentina"
-}
+
 export default App;
