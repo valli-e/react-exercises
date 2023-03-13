@@ -4,7 +4,7 @@ export class Counter extends React.Component {
 
   constructor(props) {
     super(props);
-      state = {
+      this.state = {
     count:0
   }
     setInterval(() => {
