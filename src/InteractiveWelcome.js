@@ -22,7 +22,7 @@ export class InteractiveWelcome extends Component {
             <input type ="text" name="name" onChange={this.handle}/>
             < Welcome name = {this.state.name} />
           </div>
-          )
+     )
   }
 }
 
