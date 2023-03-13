@@ -1,18 +1,14 @@
 
 import React from 'react';
-import  Welcome  from './Welcome'
+import  ToDoList from './ToDoList'
 
-class App extends React.Component{
+class App extends React.Component {
   render() {
     return (
       <div>
-        < Welcome name={<strong>John</strong>} age={21} />
+        < ToDoList />
       </div>
     );
   }
 }
-Welcome.defaultProps = {
-  name: "Valentina"
-}
 export default App;
-
