@@ -1,14 +1,14 @@
-
 import React from 'react';
-import  ToDoList from './ToDoList'
-
-class App extends React.Component {
+import InteractiveWelcome from './InteractiveWelcome';
+class App extends React.Component{
   render() {
     return (
       <div>
-        < ToDoList />
+        < InteractiveWelcome />
       </div>
     );
   }
 }
+
 export default App;
+
