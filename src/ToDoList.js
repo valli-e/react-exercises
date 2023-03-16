@@ -21,8 +21,12 @@ class TodoList extends Component {
     }
     this.setState(prevState => ({
       items: [...prevState.items, newItem],
-      newItem: "" 
+      newItem: ""
     }));
+  };
+
+  handleReset = () => {
+    this.setState({ items: [] });
   };
 
   render() {
@@ -38,6 +42,7 @@ class TodoList extends Component {
             <li key={index}>{item}</li>
           ))}
         </ul>
+        <button onClick={this.handleReset}>Reset</button>
       </div>
     );
   }
@@ -47,4 +52,5 @@ export default TodoList;
 
 
 
-// Modify the TodoList component so that the input clears every time a Todo is added to the items array
+
+// Modify the TodoList by adding a "reset" button that clears the items array when clicked.
