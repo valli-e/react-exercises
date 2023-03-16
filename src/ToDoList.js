@@ -29,6 +29,12 @@ class TodoList extends Component {
     this.setState({ items: [] });
   };
 
+  handleRemove = index => {
+    this.setState(prevState => ({
+      items: prevState.items.filter((_, i) => i !== index)
+    }));
+  };
+
   render() {
     const { items, newItem } = this.state;
     return (
@@ -39,7 +45,10 @@ class TodoList extends Component {
         </form>
         <ul>
           {items.map((item, index) => (
-            <li key={index}>{item}</li>
+            <li key={index}>
+              {item}
+              <button onClick={() => this.handleRemove(index)}>Remove</button>
+            </li>
           ))}
         </ul>
         <button onClick={this.handleReset}>Reset</button>
@@ -53,4 +62,4 @@ export default TodoList;
 
 
 
-// Modify the TodoList by adding a "reset" button that clears the items array when clicked.
+// Modify the TodoList by adding a "remove" button to each li tag. When clicked, the event handler should remove corresponding item from the items array.
