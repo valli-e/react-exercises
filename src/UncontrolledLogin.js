@@ -8,6 +8,10 @@ class UncontrolledLogin extends Component {
     this.rememberInput = React.createRef();
   }
 
+  componentDidMount() {
+    this.usernameInput.current.focus();
+  }
+
   handleLogin = (event) => {
     event.preventDefault();
     const username = this.usernameInput.current.value;
@@ -15,6 +19,7 @@ class UncontrolledLogin extends Component {
     const remember = this.rememberInput.current.checked;
     this.props.onLogin({ username, password, remember });
   };
+
   handleReset = () => {
     this.usernameInput.current.value = "";
     this.passwordInput.current.value = "";
