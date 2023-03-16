@@ -21,7 +21,7 @@ class TodoList extends Component {
     }
     this.setState(prevState => ({
       items: [...prevState.items, newItem],
-      newItem: "" // clear the input field after adding new item
+      newItem: "" 
     }));
   };
 
