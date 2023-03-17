@@ -1,18 +1,17 @@
-import React, { Component } from 'react'
-import './custom.css';
+import React, { Component } from "react";
+import "./custom.css";
 
- class Сontainer extends Component {
+class Сontainer extends Component {
   render() {
-    return (
-      <div className='custom-container'>
-       {this.props.children}
+    return( 
+        <div>
+        <div className="title">{this.props.title}</div>
+        <div className="custom-container">{this.props.children}</div>
       </div>
-    )
+    );
   }
 }
 
-export default Сontainer
+export default Сontainer;
 
-// Create a Container component that renders its children within a div tag. 
-// Have the div tag use a white background and a red border,
-//  either with a custom class or by using tailwindcss.
+// Modify the Container component so that it can display a title received within the title prop.
