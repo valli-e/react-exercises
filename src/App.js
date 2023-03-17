@@ -1,14 +1,15 @@
 import React from 'react';
-import Login from './Login;
+import Container from './Сontainer'
 
 export class App extends React.Component{
-  onLogin = (state) => {
-    console.log(state);
-  }
   render() {
     return (
       <div>
-        <Login onLogin= {this.onLogin}/>
+        <Container>
+          <h1>Hello,World</h1>
+          <p>This is my content</p>
+        </Container>
+        
       </div>
     );
   }
