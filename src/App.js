@@ -1,7 +1,7 @@
-import React from 'react';
-import Container from './Сontainer'
+import React from "react";
+import Container from "./Сontainer";
 
-export class App extends React.Component{
+export class App extends React.Component {
   render() {
     return (
       <div>
@@ -9,11 +9,9 @@ export class App extends React.Component{
           <h1>Hello,World</h1>
           <p>This is my content</p>
         </Container>
-        
       </div>
     );
   }
 }
 
 export default App;
-
