@@ -1,24 +1,40 @@
-// Create a Login component containing three inputs: a username input, a password input and a remember checkbox.
-//  All three inputs should be controlled components.
+// Modify the Login component from Forms 03 so that the "login" button background color is "red" when the inputted password's
+//  length is shorter than 8 characters, green otherwise.
 
 import React, { Component } from "react";
 
+class LoginForm extends Component {
   state = {
     username: "",
     password: "",
     remember: false,
+    passwordLength: 0, // Step 1
   };
 
   handleInputs = (event) => {
     let value = event.target.value;
     let checked = event.target.checked;
     let name = event.target.name;
-    console.log(checked)
-    this.setState({
-      [name]: value ?? checked
-    });
+
+    if (name === "password") {
+      this.setState({
+        [name]: value ?? checked,
+        passwordLength: value.length, // Step 2
+      });
+    } else {
+      this.setState({
+        [name]: value ?? checked,
+      });
+    }
   };
+
   render() {
+    const { passwordLength } = this.state; // Step 1
+
+    const buttonStyle = { // Step 3
+      backgroundColor: passwordLength < 8 ? "red" : "green",
+    };
+
     return (
       <div>
         <input
@@ -26,20 +42,22 @@ import React, { Component } from "react";
           onChange={this.handleInputs}
           name="username"
           placeholder="Username"
-        ></input>
+        />
         <input
           type="password"
           onChange={this.handleInputs}
           name="password"
           placeholder="Password"
-        ></input>
+        />
         <input
           type="checkbox"
           onChange={this.handleInputs}
           name="remember"
-        ></input>
-        <button onClick={() => this.props.onLogin(this.state)}>Login</button>
+        />
+        <button onClick={() => this.props.onLogin(this.state)} style={buttonStyle}>Login</button> {/* Step 4 */}
       </div>
     );
   }
 }
+
+export default LoginForm;
