@@ -1,16 +1,17 @@
-import React from 'react';
-import Welcome from './Welcome'
-import './index.css'
+import React from "react";
+import Container from "./Сontainer";
 
-export class App extends React.Component{
+export class App extends React.Component {
   render() {
     return (
       <div>
-        < Welcome />
+        <Container>
+          <h1>Hello,World</h1>
+          <p>This is my content</p>
+        </Container>
       </div>
     );
   }
 }
 
 export default App;
-
