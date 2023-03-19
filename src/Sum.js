@@ -16,4 +16,4 @@ export default Sum;
 
 // What happens if the numbers prop of the Sum component is not set? ---> Sara' undefined
 // How can you set a default value for this prop? 
-// --> Possiamo usare 'defaultProps' property oppure settare i valori nel parametro
+// --> Possiamo usare 'defaultProps' property oppure settare i valori nel parametro della funzione
