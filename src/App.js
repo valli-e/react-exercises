@@ -1,18 +1,9 @@
 import React from 'react';
-import Container from './Сontainer'
+import Sum from './Sum';
 
-export class App extends React.Component{
-  render() {
-    return (
-      <div>
-        <Container title="This is a title">
-          <h1>Hello,World</h1>
-          <p>This is my content</p>
-        </Container>
-        
-      </div>
-    );
-  }
+export default function App() {
+  return (
+   < Sum numbers={[3,8,9,1,4,7]} /> 
+  )
 }
 
-export default App;
