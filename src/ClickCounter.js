@@ -1,21 +1,19 @@
-import React, { useState, Component } from 'react'
+import React, { useState, Component } from "react";
 
- export function ClickCounter(){
+export function ClickCounter() {
+  const [count, setСount] = useState(0);
 
-const[count, setСount] = useState(0);
+  const handleClick = () => {
+    setСount((prevCount) => prevCount + 1);
+  };
 
-const handleClick = () => {
-  setСount(prevCount => prevCount +1)
-}
-
-    return (
-      <div>
+  return (
+    <div>
       <h1> current count: {count}</h1>
       <button onClick={handleClick}> click me </button>
-      </div>
-    )
-  }
-
+    </div>
+  );
+}
 
 export default ClickCounter;
 
