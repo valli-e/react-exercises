@@ -1,29 +1,25 @@
-import React from "react";
 
-export class Counter extends React.Component {
+// Rewrite the Counter component from State 1 as a function component and add a side effect that initializes the interval as soon as the component renders, and clears it when the component unmounts.
 
-  constructor(props) {
-    super(props);
-      this.state = {
-    count:0
-  }
-    setInterval(() => {
-    this.setState((prevState) => {
-      return({
-        count: prevState.count + 1
-      })
-    })
-    },1000)
-  }
-  // this.setState({count: this.state.count++}) 
-  render() {
+import {React,useState,useEffect} from "react";
+
+function Counter() {
+  const [count,setCount] = useState(0)
+ 
+
+  useEffect(() => {
+
+  }, [])
+   const interval = setInterval(() => {
+    setCount((prevState) => prevCount +1 
+      },1000);
+      return () => clearInterval(interval);
+}, []);
+   
+
     return (
       <div>
-        <h1>{this.state.count}</h1>
+        <h1>{count}</h1>
       </div>
     );
-  }
-}
-//Create a Counter class component with an internal state containing a count property, initialized to 0.
-//The Counter component should render the count property within an h1 tag,
-// and the count property should be incremented by 1 every second;
+
