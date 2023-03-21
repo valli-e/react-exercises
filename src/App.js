@@ -1,9 +1,15 @@
 import React from 'react';
-import Sum from './Sum';
+import GithubUser from './GithubUser';
 
-export default function App() {
-  return (
-   < Sum numbers={[3,8,9,1,4,7]} /> 
-  )
+
+export class App extends React.Component{
+  render() {
+    return (
+      <div>
+      <GithubUser username="valli-e" />
+      </div>
+    );
+  }
 }
 
+export default App;
