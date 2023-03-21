@@ -9,7 +9,7 @@ function Counter() {
 
   useEffect(() => {
    const interval = setInterval(() => {
-    setCount((prevState) => prevCount +1 
+    setCount((prevCount) => prevCount +1 
       },1000);
       return () => clearInterval(interval);
 }, []);
