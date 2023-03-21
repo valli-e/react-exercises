@@ -8,8 +8,6 @@ function Counter() {
  
 
   useEffect(() => {
-
-  }, [])
    const interval = setInterval(() => {
     setCount((prevState) => prevCount +1 
       },1000);
