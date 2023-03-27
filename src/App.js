@@ -1,18 +1,17 @@
 import React from 'react';
-import Container from './Сontainer'
+import Counter from './Counter'
+
 
 export class App extends React.Component{
   render() {
     return (
       <div>
-        <Container title="This is a title">
-          <h1>Hello,World</h1>
-          <p>This is my content</p>
-        </Container>
-        
+      <Counter />
       </div>
     );
   }
 }
 
 export default App;
+
+
