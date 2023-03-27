@@ -1,9 +1,15 @@
 import React from 'react';
-import Sum from './Sum';
+import Counter from './Counter'
 
-export default function App() {
-  return (
-   < Sum numbers={[3,8,9,1,4,7]} /> 
-  )
+
+export class App extends React.Component{
+  render() {
+    return (
+      <div>
+      <Counter />
+      </div>
+    );
+  }
 }
 
+export default App;
