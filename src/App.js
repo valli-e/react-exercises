@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from './Form'
+import GithubUser from './GithubUser'
 
 
 
@@ -7,7 +7,7 @@ export class App extends React.Component{
   render() {
     return (
       <div>
-      <Form/>
+      <GithubUser username="valli-e"/>
       </div>
     );
   }
