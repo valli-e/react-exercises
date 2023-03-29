@@ -4,6 +4,15 @@ import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
 
+function NotFound() {
+  return (
+    <div>
+      <h1>Not Found</h1>
+      <p> Error: The page you're looking for could not be found</p>
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <Router>
@@ -30,7 +39,11 @@ export default function App() {
         <Route path="/contact">
           <Contact />
         </Route>
+        <Route>
+          <NotFound />
+        </Route>
       </Switch>
     </Router>
   );
 }
+
