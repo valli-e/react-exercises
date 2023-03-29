@@ -1,9 +1,9 @@
-import React from "react";
+mport React from "react";
 
-const Welcome = () => {
+const Welcome = (props) => {
    return (
       <div>
-        <p>Welcome, {this.props.name}!</p>
+        <p>Welcome, {props.name}!</p>
       </div>
     );
 }
