@@ -1,13 +1,12 @@
-import React from 'react';
-import  ClickCounter from './ClickCounter'
-class App extends React.Component{
-  render() {
-    return (
-      <div>
-        < ClickCounter/>
-      </div>
-    );
-  }
-}
+import { Route } from "react-router-dom";
+import { ClickCounter } from "./ClickCounter";
 
-export default App;
+function App() {
+  return (
+    <div>
+      <Route path="/counter">
+        <Counter />
+      </Route>
+    </div>
+  );
+}
