@@ -1,15 +1,12 @@
-import React from 'react';
-import GithubUser from './GithubUser';
+import { Route } from 'react-router-dom';
+import ShowGithubUser from './ShowGithubUser';
 
-
-export class App extends React.Component{
-  render() {
-    return (
-      <div>
-      <GithubUser username="valli-e" />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div>
+      <Route path="/users/:username" component={ShowGithubUser} />
+    </div>
+  );
 }
 
 export default App;
