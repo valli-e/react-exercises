@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import GithubUser from './GithubUser';
 import ShowGithubUser from './ShowGithubUser';
 
@@ -32,13 +32,14 @@ export default function GithubUserList() {
         <div>
           {usernames.map((el) => {
             return (
-              <Link key={el} to={`/users/${el}`}>
-                {el}
-              </Link>
+              <div key={el}>
+                <Link to={`/users/${el}`}>{el}</Link>
+              </div>
             );
           })}
         </div>
       )}
+      <Route exact path="/users" render={() => <h3>Add a user and select it</h3>} />
       <Route path="/users/:username" component={ShowGithubUser} />
     </div>
   );
