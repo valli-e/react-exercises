@@ -11,7 +11,7 @@ function DisplayLanguage() {
         }
     }
 
-    return <>
+    return <div>
     <LanguageContext.Consumer>
         {language => {
             return(
@@ -19,7 +19,7 @@ function DisplayLanguage() {
             )
         }}
     </LanguageContext.Consumer>    
-    </>
+    </div>
 }
 
 export default DisplayLanguage;
