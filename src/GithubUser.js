@@ -1,8 +1,11 @@
-import React from 'react'
-import useGithubUser from "./useGithubUser";
+import React from 'react';
+import useGithubUser from './useGithubUser';
 
 export default function GithubUser({ username }) {
-  const [userData] = useGithubUser(username);
+  const { userData, isLoading, isError } = useGithubUser(username);
+
+  if (isLoading) return <div>Loading...</div>;
+  if (isError) return <div>Error fetching user data</div>;
 
   return (
     <div>
