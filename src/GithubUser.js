@@ -2,10 +2,11 @@ import React from 'react';
 import useGithubUser from './useGithubUser';
 
 export default function GithubUser({ username }) {
-  const { userData, isLoading, isError } = useGithubUser(username);
+  const [userData, refetch] = useGithubUser(username);
 
-  if (isLoading) return <div>Loading...</div>;
-  if (isError) return <div>Error fetching user data</div>;
+  const handleRefresh = () => {
+    refetch();
+  };
 
   return (
     <div>
@@ -17,6 +18,7 @@ export default function GithubUser({ username }) {
           <p>Followers: {userData.followers}</p>
           <p>Following: {userData.following}</p>
           <p>Public Repositories: {userData.public_repos}</p>
+          <button onClick={handleRefresh}>Refresh</button>
         </div>
       )}
     </div>
