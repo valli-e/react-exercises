@@ -16,7 +16,7 @@ function DisplayLanguage() {
         {language => {
             return(
                 <>
-                <h1>{text[language].TITLE}</h1>
+                <h1>{text[language].title}</h1>
                 <p>(The value received from provider is: {language})</p>
                 </>
             )
